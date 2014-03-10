@@ -6,7 +6,6 @@ myApp.config(['$routeProvider',function($routeProvider){
 	$routeProvider.otherwise({redirectTo:'/home'});
 }]);
 myApp.controller('MasterController',['$scope','$http',function($scope,$http){
-	console.log("MasterController");
 	/*
 
 		$http({method: 'GET', url: '/someUrl'}).
@@ -23,6 +22,6 @@ myApp.controller('MasterController',['$scope','$http',function($scope,$http){
 
 	$http({method:'GET',url:'http://localhost:30000'})
 		.success(function(d,s,h,c){
-			console.log(d);
-		})
+			
+		});
 }]);
