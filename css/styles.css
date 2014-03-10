@@ -31,14 +31,17 @@
     color: #c2b3d1;
     background-color: #ffffff;
 }
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
     color: #c2b3d1;
     background-color: #ffffff;
 }
 .navbar-default .navbar-toggle {
     border-color: #ffffff;
 }
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
     background-color: #ffffff;
 }
 .navbar-default .navbar-toggle .icon-bar {
