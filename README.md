@@ -8,4 +8,4 @@ Dependencies
 Resources
 ========
 
-* http://smarchal.com/twbscolor/?bd=e74c3c&bh=c0392b&cd=ecf0f1&ch=ffbbbc
+* http://smarchal.com/twbscolor/
