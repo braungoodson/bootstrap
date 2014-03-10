@@ -1,0 +1,110 @@
+/*
+Document : MonsterFlat
+Author   : Samuel Marchal - @zessx
+Version  : 1.0
+Update   : 2013-05-16
+Licence  : CC-BY 3.0 - http://creativecommons.org/licenses/by/3.0/
+*/
+.mf-32  { display: block; width: 32px;  height: 32px;  border-radius: 16px; background: transparent url(./monsterflat/mf-icons-circle32.png) 0 0; } 
+.mf-64  { display: block; width: 64px;  height: 64px;  border-radius: 32px; background: transparent url(./monsterflat/mf-icons-circle64.png) 0 0; } 
+.mf-128 { display: block; width: 128px; height: 128px; border-radius: 64px; background: transparent url(./monsterflat/mf-icons-circle128.png) 0 0; } 
+.mf-square .mf-32,  .mf-square.mf-32  { border-radius: 0px; background: transparent url(./monsterflat/mf-icons-square32.png) 0 0; }
+.mf-square .mf-64,  .mf-square.mf-64  { border-radius: 0px; background: transparent url(./monsterflat/mf-icons-square64.png) 0 0; }
+.mf-square .mf-128, .mf-square.mf-128 { border-radius: 0px; background: transparent url(./monsterflat/mf-icons-square128.png) 0 0; }
+/* Mini Pack */
+.mf-32.mf-monsterflat { background-position: 0px 0px; } .mf-32.mf-monsterflat-r { background-position: 0px -32px; }
+.mf-64.mf-monsterflat { background-position: 0px 0px; } .mf-64.mf-monsterflat-r { background-position: 0px -64px; }
+.mf-128.mf-monsterflat { background-position: 0px 0px; } .mf-128.mf-monsterflat-r { background-position: 0px -128px; }
+.mf-32.mf-email { background-position: -32px 0px; } .mf-32.mf-email-r { background-position: -32px -32px; }
+.mf-64.mf-email { background-position: -64px 0px; } .mf-64.mf-email-r { background-position: -64px -64px; }
+.mf-128.mf-email { background-position: -128px 0px; } .mf-128.mf-email-r { background-position: -128px -128px; }
+.mf-32.mf-phone { background-position: -64px 0px; } .mf-32.mf-phone-r { background-position: -64px -32px; }
+.mf-64.mf-phone { background-position: -128px 0px; } .mf-64.mf-phone-r { background-position: -128px -64px; }
+.mf-128.mf-phone { background-position: -256px 0px; } .mf-128.mf-phone-r { background-position: -256px -128px; }
+.mf-32.mf-rss { background-position: -96px 0px; } .mf-32.mf-rss-r { background-position: -96px -32px; }
+.mf-64.mf-rss { background-position: -192px 0px; } .mf-64.mf-rss-r { background-position: -192px -64px; }
+.mf-128.mf-rss { background-position: -384px 0px; } .mf-128.mf-rss-r { background-position: -384px -128px; }
+.mf-32.mf-geoloc { background-position: -128px 0px; } .mf-32.mf-geoloc-r { background-position: -128px -32px; }
+.mf-64.mf-geoloc { background-position: -256px 0px; } .mf-64.mf-geoloc-r { background-position: -256px -64px; }
+.mf-128.mf-geoloc { background-position: -512px 0px; } .mf-128.mf-geoloc-r { background-position: -512px -128px; }
+.mf-32.mf-link { background-position: -160px 0px; } .mf-32.mf-link-r { background-position: -160px -32px; }
+.mf-64.mf-link { background-position: -320px 0px; } .mf-64.mf-link-r { background-position: -320px -64px; }
+.mf-128.mf-link { background-position: -640px 0px; } .mf-128.mf-link-r { background-position: -640px -128px; }
+.mf-32.mf-download { background-position: -192px 0px; } .mf-32.mf-download-r { background-position: -192px -32px; }
+.mf-64.mf-download { background-position: -384px 0px; } .mf-64.mf-download-r { background-position: -384px -64px; }
+.mf-128.mf-download { background-position: -768px 0px; } .mf-128.mf-download-r { background-position: -768px -128px; }
+.mf-32.mf-bookmark { background-position: -224px 0px; } .mf-32.mf-bookmark-r { background-position: -224px -32px; }
+.mf-64.mf-bookmark { background-position: -448px 0px; } .mf-64.mf-bookmark-r { background-position: -448px -64px; }
+.mf-128.mf-bookmark { background-position: -896px 0px; } .mf-128.mf-bookmark-r { background-position: -896px -128px; }
+.mf-32.mf-facebook { background-position: 0px -64px; } .mf-32.mf-facebook-r { background-position: 0px -96px; }
+.mf-64.mf-facebook { background-position: 0px -128px; } .mf-64.mf-facebook-r { background-position: 0px -192px; }
+.mf-128.mf-facebook { background-position: 0px -256px; } .mf-128.mf-facebook-r { background-position: 0px -384px; }
+.mf-32.mf-twitter { background-position: -32px -64px; } .mf-32.mf-twitter-r { background-position: -32px -96px; }
+.mf-64.mf-twitter { background-position: -64px -128px; } .mf-64.mf-twitter-r { background-position: -64px -192px; }
+.mf-128.mf-twitter { background-position: -128px -256px; } .mf-128.mf-twitter-r { background-position: -128px -384px; }
+.mf-32.mf-youtube { background-position: -64px -64px; } .mf-32.mf-youtube-r { background-position: -64px -96px; }
+.mf-64.mf-youtube { background-position: -128px -128px; } .mf-64.mf-youtube-r { background-position: -128px -192px; }
+.mf-128.mf-youtube { background-position: -256px -256px; } .mf-128.mf-youtube-r { background-position: -256px -384px; }
+.mf-32.mf-googleplus { background-position: -96px -64px; } .mf-32.mf-googleplus-r { background-position: -96px -96px; }
+.mf-64.mf-googleplus { background-position: -192px -128px; } .mf-64.mf-googleplus-r { background-position: -192px -192px; }
+.mf-128.mf-googleplus { background-position: -384px -256px; } .mf-128.mf-googleplus-r { background-position: -384px -384px; }
+.mf-32.mf-linkedin { background-position: -128px -64px; } .mf-32.mf-linkedin-r { background-position: -128px -96px; }
+.mf-64.mf-linkedin { background-position: -256px -128px; } .mf-64.mf-linkedin-r { background-position: -256px -192px; }
+.mf-128.mf-linkedin { background-position: -512px -256px; } .mf-128.mf-linkedin-r { background-position: -512px -384px; }
+.mf-32.mf-pinterest { background-position: -160px -64px; } .mf-32.mf-pinterest-r { background-position: -160px -96px; }
+.mf-64.mf-pinterest { background-position: -320px -128px; } .mf-64.mf-pinterest-r { background-position: -320px -192px; }
+.mf-128.mf-pinterest { background-position: -640px -256px; } .mf-128.mf-pinterest-r { background-position: -640px -384px; }
+.mf-32.mf-foursquare { background-position: -192px -64px; } .mf-32.mf-foursquare-r { background-position: -192px -96px; }
+.mf-64.mf-foursquare { background-position: -384px -128px; } .mf-64.mf-foursquare-r { background-position: -384px -192px; }
+.mf-128.mf-foursquare { background-position: -768px -256px; } .mf-128.mf-foursquare-r { background-position: -768px -384px; }
+.mf-32.mf-picasa { background-position: -224px -64px; } .mf-32.mf-picasa-r { background-position: -224px -96px; }
+.mf-64.mf-picasa { background-position: -448px -128px; } .mf-64.mf-picasa-r { background-position: -448px -192px; }
+.mf-128.mf-picasa { background-position: -896px -256px; } .mf-128.mf-picasa-r { background-position: -896px -384px; }
+.mf-32.mf-tumblr { background-position: 0px -128px; } .mf-32.mf-tumblr-r { background-position: 0px -160px; }
+.mf-64.mf-tumblr { background-position: 0px -256px; } .mf-64.mf-tumblr-r { background-position: 0px -320px; }
+.mf-128.mf-tumblr { background-position: 0px -512px; } .mf-128.mf-tumblr-r { background-position: 0px -640px; }
+.mf-32.mf-deviantart { background-position: -32px -128px; } .mf-32.mf-deviantart-r { background-position: -32px -160px; }
+.mf-64.mf-deviantart { background-position: -64px -256px; } .mf-64.mf-deviantart-r { background-position: -64px -320px; }
+.mf-128.mf-deviantart { background-position: -128px -512px; } .mf-128.mf-deviantart-r { background-position: -128px -640px; }
+.mf-32.mf-instagram { background-position: -64px -128px; } .mf-32.mf-instagram-r { background-position: -64px -160px; }
+.mf-64.mf-instagram { background-position: -128px -256px; } .mf-64.mf-instagram-r { background-position: -128px -320px; }
+.mf-128.mf-instagram { background-position: -256px -512px; } .mf-128.mf-instagram-r { background-position: -256px -640px; }
+.mf-32.mf-myspace { background-position: -96px -128px; } .mf-32.mf-myspace-r { background-position: -96px -160px; }
+.mf-64.mf-myspace { background-position: -192px -256px; } .mf-64.mf-myspace-r { background-position: -192px -320px; }
+.mf-128.mf-myspace { background-position: -384px -512px; } .mf-128.mf-myspace-r { background-position: -384px -640px; }
+.mf-32.mf-dailymotion { background-position: -128px -128px; } .mf-32.mf-dailymotion-r { background-position: -128px -160px; }
+.mf-64.mf-dailymotion { background-position: -256px -256px; } .mf-64.mf-dailymotion-r { background-position: -256px -320px; }
+.mf-128.mf-dailymotion { background-position: -512px -512px; } .mf-128.mf-dailymotion-r { background-position: -512px -640px; }
+.mf-32.mf-flickr { background-position: -160px -128px; } .mf-32.mf-flickr-r { background-position: -160px -160px; }
+.mf-64.mf-flickr { background-position: -320px -256px; } .mf-64.mf-flickr-r { background-position: -320px -320px; }
+.mf-128.mf-flickr { background-position: -640px -512px; } .mf-128.mf-flickr-r { background-position: -640px -640px; }
+.mf-32.mf-viadeo { background-position: -192px -128px; } .mf-32.mf-viadeo-r { background-position: -192px -160px; }
+.mf-64.mf-viadeo { background-position: -384px -256px; } .mf-64.mf-viadeo-r { background-position: -384px -320px; }
+.mf-128.mf-viadeo { background-position: -768px -512px; } .mf-128.mf-viadeo-r { background-position: -768px -640px; }
+.mf-32.mf-soundcloud { background-position: -224px -128px; } .mf-32.mf-soundcloud-r { background-position: -224px -160px; }
+.mf-64.mf-soundcloud { background-position: -448px -256px; } .mf-64.mf-soundcloud-r { background-position: -448px -320px; }
+.mf-128.mf-soundcloud { background-position: -896px -512px; } .mf-128.mf-soundcloud-r { background-position: -896px -640px; }
+.mf-32.mf-msn { background-position: 0px -192px; } .mf-32.mf-msn-r { background-position: 0px -224px; }
+.mf-64.mf-msn { background-position: 0px -384px; } .mf-64.mf-msn-r { background-position: 0px -448px; }
+.mf-128.mf-msn { background-position: 0px -768px; } .mf-128.mf-msn-r { background-position: 0px -896px; }
+.mf-32.mf-skyrock { background-position: -32px -192px; } .mf-32.mf-skyrock-r { background-position: -32px -224px; }
+.mf-64.mf-skyrock { background-position: -64px -384px; } .mf-64.mf-skyrock-r { background-position: -64px -448px; }
+.mf-128.mf-skyrock { background-position: -128px -768px; } .mf-128.mf-skyrock-r { background-position: -128px -896px; }
+.mf-32.mf-blogspot { background-position: -64px -192px; } .mf-32.mf-blogspot-r { background-position: -64px -224px; }
+.mf-64.mf-blogspot { background-position: -128px -384px; } .mf-64.mf-blogspot-r { background-position: -128px -448px; }
+.mf-128.mf-blogspot { background-position: -256px -768px; } .mf-128.mf-blogspot-r { background-position: -256px -896px; }
+.mf-32.mf-github { background-position: -96px -192px; } .mf-32.mf-github-r { background-position: -96px -224px; }
+.mf-64.mf-github { background-position: -192px -384px; } .mf-64.mf-github-r { background-position: -192px -448px; }
+.mf-128.mf-github { background-position: -384px -768px; } .mf-128.mf-github-r { background-position: -384px -896px; }
+.mf-32.mf-digg { background-position: -128px -192px; } .mf-32.mf-digg-r { background-position: -128px -224px; }
+.mf-64.mf-digg { background-position: -256px -384px; } .mf-64.mf-digg-r { background-position: -256px -448px; }
+.mf-128.mf-digg { background-position: -512px -768px; } .mf-128.mf-digg-r { background-position: -512px -896px; }
+.mf-32.mf-delicious { background-position: -160px -192px; } .mf-32.mf-delicious-r { background-position: -160px -224px; }
+.mf-64.mf-delicious { background-position: -320px -384px; } .mf-64.mf-delicious-r { background-position: -320px -448px; }
+.mf-128.mf-delicious { background-position: -640px -768px; } .mf-128.mf-delicious-r { background-position: -640px -896px; }
+.mf-32.mf-lastfm { background-position: -192px -192px; } .mf-32.mf-lastfm-r { background-position: -192px -224px; }
+.mf-64.mf-lastfm { background-position: -384px -384px; } .mf-64.mf-lastfm-r { background-position: -384px -448px; }
+.mf-128.mf-lastfm { background-position: -768px -768px; } .mf-128.mf-lastfm-r { background-position: -768px -896px; }
+.mf-32.mf-stumbleupon { background-position: -224px -192px; } .mf-32.mf-stumbleupon-r { background-position: -224px -224px; }
+.mf-64.mf-stumbleupon { background-position: -448px -384px; } .mf-64.mf-stumbleupon-r { background-position: -448px -448px; }
+.mf-128.mf-stumbleupon { background-position: -896px -768px; } .mf-128.mf-stumbleupon-r { background-position: -896px -896px; }
