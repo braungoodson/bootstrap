@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-ng-app="myApp">
 	<head>
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,11 +44,17 @@
 	      </div>
 	    </div>
     <!-- NAVIGATION -->
+    <section ng-view></section>
+    <!-- VIEWS -->
+    	<script type="text/ng-template" id="home">
+	    	<span>Home.</span>
+    	</script>
+    <!-- VIEWS -->
     <!-- SCRIPTS -->
 			<script src="js/jquery.min.js"></script>
 			<script src="js/bootstrap.js"></script>
 			<script src="js/angular.min.js"></script>
-			<script src="js/angular.min.js"></script>
+			<script src="js/angular-route.min.js"></script>
 			<script src="js/libs.js"></script>
 		<!-- SCRIPTS -->
 	</body>
