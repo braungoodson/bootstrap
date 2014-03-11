@@ -15,12 +15,21 @@
     </script>
     <script type="text/javascript">
       function initialize() {
+      	var center = new google.maps.LatLng(42.25,20);
         var mapOptions = {
-          center: new google.maps.LatLng(42.25,20),
+          center: center,
           zoom: 3
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
+        var map = new google.maps.Map(
+        	document.getElementById("map-canvas"),
+          mapOptions
+        );
+        var icon = "./cloud-128.png";
+        var marker = new google.maps.Marker({
+        	position: center,
+        	map: map,
+        	icon: icon
+        })
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
@@ -34,7 +43,7 @@
 			<div class="navbar navbar-default navbar-static" role="navigation">
 	      <div class="container">
 	      	<!-- BRAND NAME -->
-						<a class="navbar-brand" href="#">GEOCorp</a>
+						<a class="navbar-brand" href="#">CloudCast</a>
 						<!-- -->
 					<!-- BRAND NAME -->
 	        <!-- NAVIGATION COLLAPSE -->
@@ -69,7 +78,7 @@
     <!-- NAVIGATION -->
     <footer>
     	<center>
-    		<img src="./monsterflat-1.0-mini/images/circle/monsterflat-128.png"><br><br>
+    		<img src="./cloud-128.png"><br><br>
     		<span>BY BRAUN</span>
     	</center>
     </footer>

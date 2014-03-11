@@ -3,18 +3,18 @@
     border-color: #ffffff;
 }
 .navbar-default .navbar-brand {
-    color: rgba(23, 161, 127, 0.43);
+    color: black;
 }
 .navbar-default .navbar-brand:hover, 
 .navbar-default .navbar-brand:focus {
     color: #17A17F;
 }
 .navbar-default .navbar-text, .dropdown-menu {
-    color: rgba(23, 161, 127, 0.43);
+    color: black;
 }
 .navbar-default .navbar-nav > li > a,
 .dropdown-menu > li > a {
-    color: rgba(23, 161, 127, 0.43);
+    color: black;
 }
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus,
@@ -48,14 +48,14 @@
     background-color: #ffffff;
 }
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: rgba(23, 161, 127, 0.43);
+    background-color: black;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-    border-color: rgba(23, 161, 127, 0.43);
+    border-color: black;
 }
 .navbar-default .navbar-link {
-    color: rgba(23, 161, 127, 0.43);
+    color: black;
 }
 .navbar-default .navbar-link:hover {
     color: #17A17F;
@@ -63,7 +63,7 @@
 
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: rgba(23, 161, 127, 0.43);
+        color: black;
     }
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #17A17F;
@@ -79,7 +79,7 @@ footer {
     padding: 100px 0;
     color: white;
     /*background: #17A17F;*/
-    background: rgba(23, 161, 127, 0.43);
+    background: black;
     height:100%;
 }
 
@@ -92,6 +92,10 @@ footer {
     border-radius: 0px;
 }
 
-
+footer > center > img {
+    background-color:white;
+    border-radius:100px;
+    padding:15px;
+}
 
 
