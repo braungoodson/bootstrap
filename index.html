@@ -14,23 +14,59 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpedpQArHXmlsYs9wunGPB3DhU47usoNs&sensor=true">
     </script>
     <script type="text/javascript">
+    	function FeatureOptions (color) {
+    		return [{
+			    stylers: [{
+			    	hue: color
+			    },{
+			    	visibility: 'simplified'
+			    },{
+			    	gamma: 0.5
+			    },{
+			    	weight: 0.5 
+			    }]
+			  },{
+			    elementType: 'labels',
+			    stylers: [
+			      { visibility: 'off' }
+			    ]
+			  },{
+			    featureType: 'water',
+			    stylers: [
+			      { color: color }
+			    ]
+			  }];
+    	}
       function initialize() {
+      	var MY_MAPTYPE_ID = 'custom_style';
+      	var mapTypeId = MY_MAPTYPE_ID;
       	var center = new google.maps.LatLng(42.25,20);
+      	var featureOptions = FeatureOptions ("#00010F");
         var mapOptions = {
           center: center,
-          zoom: 3
+          zoom: 3,
+          mapTypeControlOptions: {
+          	mapTypeIds: [google.maps.MapTypeId.ROADMAP,mapTypeId]
+          },
+          mapTypeId: mapTypeId
         };
         var map = new google.maps.Map(
         	document.getElementById("map-canvas"),
           mapOptions
         );
-        var icon = "./cloud-128.png";
+        var icon = "./gray-broadcast-icon.png";
+        var styledMapOptions = {
+        	name: 'Custom Style'
+        }
+        var customMapType = new google.maps.StyledMapType(featureOptions,styledMapOptions);
         var marker = new google.maps.Marker({
         	position: center,
         	map: map,
         	icon: icon
         })
+        map.mapTypes.set(MY_MAPTYPE_ID,customMapType);
       }
+
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 	</head>
