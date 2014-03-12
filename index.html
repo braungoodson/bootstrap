@@ -1,53 +1,65 @@
 <!doctype html>
 <html data-ng-app="myApp">
 	<head>
-		<title></title>
+		<title>GDST</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body data-ng-controller="MasterController">
+	<body>
 		<!-- NAVIGATION -->
-			<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+			<div class="navbar navbar-static-top navbar-inverse" role="navigation">
 	      <div class="container">
 	      	<!-- BRAND NAME -->
-						<a class="navbar-brand" href="#">Project</a>
+						<a class="navbar-brand" href="#" style="color:greenyellow"><img src="./groupon-logo11.png" style="margin-left:-15px;height:25px;"> &nbsp; Groupon Data Search Tool</a>
 						<!-- -->
 					<!-- BRAND NAME -->
-	        <!-- NAVIGATION COLLAPSE -->
-		        <!-- The button's data-target attribute points to the class navbar-collapse bellow in the navigation links -->
-		        <div class="navbar-header">
-		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		        </div>
-	        <!-- NAVIGATION COLLAPSE -->
-	        <!-- NAVIGATION LINKS -->
-						<div class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-		            <li class="active"><a href="#">Home</a></li>
-		            <li><a href="#about">About</a></li>
-		            <li><a href="#contact">Contact</a></li>
-		            <li class="dropdown">
-		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Signin<b class="caret"></b></a>
-		            	<ul class="dropdown-menu">
-		            		<li><a href="#">Account</a></li>
-		            		<li><a href="#">Settings</a></li>
-		            	</ul>
-		            </li>
-		          </ul>
-		        </div>
-	        <!-- NAVIGATION LINKS -->
 	      </div>
 	    </div>
     <!-- NAVIGATION -->
-    <section ng-view></section>
+    <section class="container" ng-view></section>
     <!-- VIEWS -->
-    	<script type="text/ng-template" id="home">
-	    	<span>Home.</span>
+    	<script type="text/ng-template" id="orders">
+	    	Search: <input type="text" data-ng-model="filter.query"/>
+	    	Filter: <select data-ng-model="filter.name">
+	    		<option value="">Any</option>
+	    		<option value="Local deals (Activities and Retail)">Local deals (Activities and Retail)</option>
+	    		<option value="Goods">Goods</option>
+					<option value="Local deals (excluding: Activities and Retail)">Local deals (excluding: Activities and Retail)</option>
+					<option value="Getaways, Occasions, Live and Now!">Getaways, Occasions, Live and Now!</option>
+					<option value="unknown">unknown</option>
+					<option value="Charity/Promotional">Charity/Promotional</option>
+	    	</select>
+	    	Order By: <select data-ng-model="filter.order">
+	    		<option value="">Default</option>
+	    		<option value="sale">Sale</option>
+	    	</select>
+	    	<br><br>
+	    	<div data-ng-controller="OrdersController">
+	    		<ul>
+	    			<li data-ng-repeat="o in orders | filter:filter.query | filter:filter.name | orderBy:filter.order">
+	    				{{o.name}}
+	    				<table>
+	    					<tr>
+	    						<td>status</td>
+	    						<td>sale</td>
+	    						<td>credit</td>
+	    						<td>debit</td>
+	    						<td>oid</td>
+	    						<td>sid</td>
+	    					</tr>
+	    					<tr>
+	    						<td>{{o.status}}</td>
+	    						<td>$ {{o.sale}}</td>
+	    						<td>$ {{o.credit}}</td>
+	    						<td>$ {{o.debit}}</td>
+	    						<td>{{o.oid}}</td>
+	    						<td>{{o.sid}}</td>
+	    					</tr>
+	    				</table>
+	    			</li>
+	    		</ul>
+	    	</div>
     	</script>
     <!-- VIEWS -->
     <!-- SCRIPTS -->
@@ -55,6 +67,7 @@
 			<script src="js/bootstrap.js"></script>
 			<script src="js/angular.min.js"></script>
 			<script src="js/angular-route.min.js"></script>
+			<script src="data/groupon.orders.js"></script>
 			<script src="js/libs.js"></script>
 		<!-- SCRIPTS -->
 	</body>

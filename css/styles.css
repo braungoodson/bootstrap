@@ -1,0 +1,42 @@
+body {
+	background-color:#666;
+}
+
+section {
+	padding-top:20px;
+	background-color:#eee;
+}
+
+section div ul {
+	list-style:none;
+	padding-left:0px;
+}
+
+section div ul li {
+	padding:5px;
+	background-color:white;
+	margin:5px;
+}
+
+section div ul li table {
+	margin:5px;
+}
+
+section div ul li table td,
+section div ul li table td tr {
+	padding:5px;
+}
+
+section div ul li table tr:first-child {
+	border-bottom:1px solid black;
+	font-style: italic;
+}
+
+input[type="text"] {
+	padding:5px;
+	height:20px;
+}
+
+a.navbar-brand {
+	color:greenyellow;
+}
