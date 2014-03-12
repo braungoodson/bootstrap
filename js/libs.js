@@ -9,18 +9,11 @@ myApp.config(['$routeProvider',function($routeProvider){
 
 myApp.factory('$ordersFactory',function(){
 	var orders = []
-	, names = []
 	, i
 	, j = groupon.orders.records
 	;
 	for (i in j) {
 		orders.push(new Order(j[i]));
-		if (!names[Name(j[i])]) {
-			names[Name(j[i])] = 1;
-			console.log(Name(j[i]));
-		} else {
-			names[Name(j[i])]++;
-		}
 	}
 	return {
 		getOrders: function () {
@@ -43,8 +36,4 @@ function Order (o) {
 	this.debit = m.LedgerDebit;
 	this.sale = m.LedgerAmount;
 	this.status = i.Status;
-}
-
-function Name (n) {
-	return n.group[0].informations.DealListName;
 }
