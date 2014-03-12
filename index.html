@@ -3,6 +3,7 @@
 	<head>
 		<title>GDST</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" type="image/ico" href="./groupon-icon.png">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
@@ -32,17 +33,19 @@
 	    	</select>
 	    	Order By: <select data-ng-model="filter.order">
 	    		<option value="">Default</option>
-	    		<option value="sale">Sale</option>
+	    		<option value="sale">Sale Ascending</option>
+	    		<option value="-sale">Sale Descending</option>
 	    	</select>
 	    	<br><br>
 	    	<div data-ng-controller="OrdersController">
 	    		<ul>
-	    			<li data-ng-repeat="o in orders | filter:filter.query | filter:filter.name | orderBy:filter.order">
+	    			<li data-ng-repeat="o in orders | filter:filter.query | filter:filter.name:strict | orderBy:filter.order">
 	    				{{o.name}}
 	    				<table>
 	    					<tr>
 	    						<td>status</td>
 	    						<td>sale</td>
+	    						<td>ledger</td>
 	    						<td>credit</td>
 	    						<td>debit</td>
 	    						<td>oid</td>
@@ -51,8 +54,9 @@
 	    					<tr>
 	    						<td>{{o.status}}</td>
 	    						<td>$ {{o.sale}}</td>
-	    						<td>$ {{o.credit}}</td>
-	    						<td>$ {{o.debit}}</td>
+	    						<td>$ {{o.ledger}}</td>
+	    						<td>$ {{o.ledgerCredit}}</td>
+	    						<td>$ {{o.ledgerDebit}}</td>
 	    						<td>{{o.oid}}</td>
 	    						<td>{{o.sid}}</td>
 	    					</tr>

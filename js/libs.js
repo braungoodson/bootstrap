@@ -32,8 +32,9 @@ function Order (o) {
 	this.oid = i.BillingId;
 	this.sid = i.Sid || 'unknown';
 	this.name = i.DealListName;
-	this.credit = m.LedgerCredit;
-	this.debit = m.LedgerDebit;
-	this.sale = m.LedgerAmount;
+	this.ledgerCredit = m.LedgerCredit;
+	this.ledgerDebit = m.LedgerDebit;
+	this.ledger = m.LedgerAmount;
+	this.sale = m.SaleGrossAmount;
 	this.status = i.Status;
 }

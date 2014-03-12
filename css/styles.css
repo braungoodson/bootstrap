@@ -5,6 +5,8 @@ body {
 section {
 	padding-top:20px;
 	background-color:#eee;
+	padding-bottom:20px;
+	margin-bottom:50px;
 }
 
 section div ul {
