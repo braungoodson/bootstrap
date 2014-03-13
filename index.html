@@ -3,50 +3,52 @@
 	<head>
 		<title>GDST</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="shortcut icon" type="image/ico" href="./groupon-icon.png">
+		<link rel="shortcut icon" type="image/ico" href="./impact-radius.png">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
     <section class="container" ng-view></section>
     <!-- VIEWS -->
-    	<script type="text/ng-template" id="orders">
+    	<script type="text/ng-template" id="actions">
 	    	<input type="text" data-ng-model="filter.query" value="Search"/>
 	    	<br>
 	    	<select data-ng-model="filter.name">
 	    		<option value="">Filter By</option>
-	    		<option value="Local deals (Activities and Retail)">Local deals (Activities and Retail)</option>
-	    		<option value="Goods">Goods</option>
-					<option value="Local deals (excluding: Activities and Retail)">Local deals (excluding: Activities and Retail)</option>
-					<option value="Getaways, Occasions, Live and Now!">Getaways, Occasions, Live and Now!</option>
-					<option value="unknown">unknown</option>
-					<option value="Charity/Promotional">Charity/Promotional</option>
 	    	</select>
 	    	<br>
 	    	<select data-ng-model="filter.order">
 	    		<option value="">Order By</option>
-	    		<option value="sale">Sale Ascending</option>
-	    		<option value="-sale">Sale Descending</option>
+	    		<option value="payout">Payout Ascending</option>
+	    		<option value="-payout">Payout Decending</option>
 	    	</select>
 	    	<br>
-	    	<div class="table-responsive" data-ng-controller="OrdersController">
+	    	<div class="table-responsive" data-ng-controller="ActionsController">
 	    		<table class="table table-striped">
 	    			<thead>
 	  					<tr>
 	  						<th>status</th>
-	  						<th>sale</th>
-	  						<th>ledger</th>
-	  						<th>credit</th>
-	  						<th>debit</th>
+	  						<th>state</th>
+	  						<th>locked status</th>
+	  						<th>payout</th>
+	  						<th>delta payout</th>
+	  						<th>intended payout</th>
+	  						<th>amount</th>
+	  						<th>delta amount</th>
+	  						<th>intended amount</th>
 	  					</tr>
   					</thead>
   					<tbody>
-	  					<tr data-ng-repeat="o in orders | filter:filter.query | filter:filter.name:strict | orderBy:filter.order">
-	  						<td>{{o.status}}</td>
-	  						<td>$ {{o.sale}}</td>
-	  						<td>$ {{o.ledger}}</td>
-	  						<td>$ {{o.ledgerCredit}}</td>
-	  						<td>$ {{o.ledgerDebit}}</td>
+	  					<tr data-ng-repeat="a in actions | filter:filter.query | filter:filter.name:strict | orderBy:filter.order">
+	  						<td>{{a.status}}</td>
+	  						<td>{{a.state}}</td>
+	  						<td>{{a.lockedStatus}}</td>
+	  						<td>{{a.payout}}</td>
+	  						<td>{{a.deltaPayout}}</td>
+	  						<td>{{a.intendedPayout}}</td>
+	  						<td>{{a.amount}}</td>
+	  						<td>{{a.deltaAmount}}</td>
+	  						<td>{{a.intendedAmount}}</td>
 	  					</tr>
 	  				</tbody>
   				</table>
@@ -58,7 +60,7 @@
 			<script src="js/bootstrap.js"></script>
 			<script src="js/angular.min.js"></script>
 			<script src="js/angular-route.min.js"></script>
-			<script src="data/groupon.orders.js"></script>
+			<script src="data/ir-gm.actions.js"></script>
 			<script src="js/libs.js"></script>
 		<!-- SCRIPTS -->
 	</body>

@@ -1,40 +1,44 @@
 var myApp = angular.module('myApp',['ngRoute']);
 
 myApp.config(['$routeProvider',function($routeProvider){
-	$routeProvider.when('/orders',{
-		templateUrl: 'orders'
+	$routeProvider.when('/actions',{
+		templateUrl: 'actions'
 	});
-	$routeProvider.otherwise({redirectTo:'/orders'});
+	$routeProvider.otherwise({redirectTo:'/actions'});
 }]);
 
-myApp.factory('$ordersFactory',function(){
-	var orders = []
+myApp.factory('$actionsFactory',function(){
+	var actions = []
 	, i
-	, j = groupon.orders.records
+	, j
+	, k = irDgm.responses
+	, l
 	;
-	for (i in j) {
-		orders.push(new Order(j[i]));
+	for (i in k) {
+		l = k[i].Action;
+		for (j in l) {
+			actions.push(new Action(l[j]));
+		}
 	}
 	return {
-		getOrders: function () {
-			return orders;
+		getactions: function () {
+			return actions;
 		}
 	};
 });
 
-myApp.controller('OrdersController',['$scope','$ordersFactory',function($scope,$ordersFactory){
-	$scope.orders = $ordersFactory.getOrders();
+myApp.controller('ActionsController',['$scope','$actionsFactory',function($scope,$actionsFactory){
+	$scope.actions = $actionsFactory.getactions();
 }]);
 
-function Order (o) {
-	var i = o.group[0].informations;
-	var m = o.measures;
-	this.oid = i.BillingId;
-	this.sid = i.Sid || 'unknown';
-	this.name = i.DealListName;
-	this.ledgerCredit = m.LedgerCredit;
-	this.ledgerDebit = m.LedgerDebit;
-	this.ledger = m.LedgerAmount;
-	this.sale = m.SaleGrossAmount;
-	this.status = i.Status;
+function Action (a) {
+	this.status = a.Status;
+	this.state = a.State;
+	this.lockedStatus = a.LockedStatus;
+	this.payout = a.Payout;
+	this.deltaPayout = a.DeltaPayout;
+	this.intendedPayout = a.IntendedPayout;
+	this.amount = a.Amount;
+	this.deltaAmount = a.DeltaAmount;
+	this.intendedAmount = a.IntendedAmount;
 }
