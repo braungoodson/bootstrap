@@ -126,6 +126,16 @@ footer {
         opacity:1
     }
 }
+@-webkit-keyframes straightInFromRight {
+    from {
+        right:-100px;
+        opacity:0;
+    }
+    to {
+        right:0px;
+        opacity:1
+    }
+}
 .gnatIn { 
     -webkit-animation: gnatIn .3s;
 }
@@ -135,5 +145,25 @@ footer {
 .straightInFromLeft { 
     -webkit-animation: straightInFromLeft .3s;
 }
+.straightInFromRight { 
+    -webkit-animation: straightInFromRight .3s;
+}
 
+.epitch-picture {
+    width:40px;
+}
 
+.epitch-default {
+    border-bottom:1px solid rgba(23, 161, 127, 0.43);
+}
+
+.epitch-blue {
+    border-top:1px solid rgba(23, 161, 127, 0.43);
+    border-bottom:1px solid rgba(23, 161, 127, 0.43);
+}
+
+.epitch-brand {
+    padding:0px;
+    margin:0px;
+    margin-top:10px;
+}

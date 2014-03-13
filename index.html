@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html data-ng-app="myApp">
 	<head>
 		<title></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +7,40 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
-		<!-- NAVIGATION -->
-			<div class="navbar navbar-default navbar-static straightInFromLeft" role="navigation">
-	      <div class="container">
-	      	<!-- BRAND NAME -->
-						<a class="navbar-brand" href="#">GEOCorp</a>
-						<!-- -->
-					<!-- BRAND NAME -->
-	        <!-- NAVIGATION COLLAPSE -->
-		        <!-- The button's data-target attribute points to the class navbar-collapse bellow in the navigation links -->
-		        <div class="navbar-header">
-		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		        </div>
-	        <!-- NAVIGATION COLLAPSE -->
-	        <!-- NAVIGATION LINKS -->
-						<div class="navbar-collapse collapse">
-		          <ul class="nav navbar-nav navbar-right">
-		            <li class="active"><a href="#">Home</a></li>
-		            <li><a href="#about">About</a></li>
-		            <li><a href="#contact">Contact</a></li>
-		            <li class="dropdown">
-		            	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Signin<b class="caret"></b></a>
-		            	<ul class="dropdown-menu">
-		            		<li><a href="#">Account</a></li>
-		            		<li><a href="#">Settings</a></li>
-		            	</ul>
-		            </li>
-		          </ul>
-		        </div>
-	        <!-- NAVIGATION LINKS -->
-	      </div>
-	    </div>
-    <!-- NAVIGATION -->
+		<section data-ng-controller="PitchesController">
+			<!-- NAVIGATION -->
+				<div class="navbar navbar-default epitch-default navbar-static straightInFromRight" role="navigation" data-ng-repeat="p in pitches">
+		      <div class="container">
+		      	<!-- BRAND NAME -->
+							<a class="navbar-brand epitch-brand" href="#"><img class="epitch-picture" src="{{p.picture}}"/></a>
+							<!-- -->
+						<!-- BRAND NAME -->
+						
+		        <!-- NAVIGATION COLLAPSE -->
+			        <!-- The button's data-target attribute points to the class navbar-collapse bellow in the navigation links -->
+			        <div class="navbar-header">
+			          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+			            <span class="sr-only">Toggle navigation</span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			            <span class="icon-bar"></span>
+			          </button>
+			        </div>
+		        <!-- NAVIGATION COLLAPSE -->
+		        <!-- NAVIGATION LINKS -->
+							<div class="navbar-collapse collapse">
+			          <ul class="nav navbar-nav navbar-right">
+			            <li><a href="#">Experience</a></li>
+			            <li><a href="#">References</a></li>
+			            <li><a href="#">Portfolio</a></li>
+			            <li><a href="#contact">Contact</a></li>
+			          </ul>
+			        </div>
+		        <!-- NAVIGATION LINKS -->
+		      </div>
+		    </div>
+	    <!-- NAVIGATION -->
+  	</section>
     <footer class="mothInLeftUp">
     	<center>
     		<img class="gnatIn" src="./monsterflat-1.0-mini/images/circle/monsterflat-128.png"><br><br>
@@ -54,6 +51,7 @@
 			<script src="js/jquery.min.js"></script>
 			<script src="js/bootstrap.js"></script>
 			<script src="js/angular.min.js"></script>
+			<script src="js/angular-route.min.js"></script>
 			<script src="js/libs.js"></script>
 		<!-- SCRIPTS -->
 	</body>
