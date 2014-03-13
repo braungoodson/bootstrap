@@ -8,22 +8,13 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
-		<!-- NAVIGATION -->
-			<div class="navbar navbar-static-top navbar-inverse" role="navigation">
-	      <div class="container">
-	      	<!-- BRAND NAME -->
-						<a class="navbar-brand" href="#" style="color:greenyellow"><img src="./groupon-logo11.png" style="margin-left:-15px;height:25px;"> &nbsp; Groupon Data Search Tool</a>
-						<!-- -->
-					<!-- BRAND NAME -->
-	      </div>
-	    </div>
-    <!-- NAVIGATION -->
     <section class="container" ng-view></section>
     <!-- VIEWS -->
     	<script type="text/ng-template" id="orders">
-	    	Search: <input type="text" data-ng-model="filter.query"/>
-	    	Filter: <select data-ng-model="filter.name">
-	    		<option value="">Any</option>
+	    	<input type="text" data-ng-model="filter.query" value="Search"/>
+	    	<br>
+	    	<select data-ng-model="filter.name">
+	    		<option value="">Filter By</option>
 	    		<option value="Local deals (Activities and Retail)">Local deals (Activities and Retail)</option>
 	    		<option value="Goods">Goods</option>
 					<option value="Local deals (excluding: Activities and Retail)">Local deals (excluding: Activities and Retail)</option>
@@ -31,38 +22,34 @@
 					<option value="unknown">unknown</option>
 					<option value="Charity/Promotional">Charity/Promotional</option>
 	    	</select>
-	    	Order By: <select data-ng-model="filter.order">
-	    		<option value="">Default</option>
+	    	<br>
+	    	<select data-ng-model="filter.order">
+	    		<option value="">Order By</option>
 	    		<option value="sale">Sale Ascending</option>
 	    		<option value="-sale">Sale Descending</option>
 	    	</select>
-	    	<br><br>
-	    	<div data-ng-controller="OrdersController">
-	    		<ul>
-	    			<li data-ng-repeat="o in orders | filter:filter.query | filter:filter.name:strict | orderBy:filter.order">
-	    				{{o.name}}
-	    				<table>
-	    					<tr>
-	    						<td>status</td>
-	    						<td>sale</td>
-	    						<td>ledger</td>
-	    						<td>credit</td>
-	    						<td>debit</td>
-	    						<td>oid</td>
-	    						<td>sid</td>
-	    					</tr>
-	    					<tr>
-	    						<td>{{o.status}}</td>
-	    						<td>$ {{o.sale}}</td>
-	    						<td>$ {{o.ledger}}</td>
-	    						<td>$ {{o.ledgerCredit}}</td>
-	    						<td>$ {{o.ledgerDebit}}</td>
-	    						<td>{{o.oid}}</td>
-	    						<td>{{o.sid}}</td>
-	    					</tr>
-	    				</table>
-	    			</li>
-	    		</ul>
+	    	<br>
+	    	<div class="table-responsive" data-ng-controller="OrdersController">
+	    		<table class="table table-striped">
+	    			<thead>
+	  					<tr>
+	  						<th>status</th>
+	  						<th>sale</th>
+	  						<th>ledger</th>
+	  						<th>credit</th>
+	  						<th>debit</th>
+	  					</tr>
+  					</thead>
+  					<tbody>
+	  					<tr data-ng-repeat="o in orders | filter:filter.query | filter:filter.name:strict | orderBy:filter.order">
+	  						<td>{{o.status}}</td>
+	  						<td>$ {{o.sale}}</td>
+	  						<td>$ {{o.ledger}}</td>
+	  						<td>$ {{o.ledgerCredit}}</td>
+	  						<td>$ {{o.ledgerDebit}}</td>
+	  					</tr>
+	  				</tbody>
+  				</table>
 	    	</div>
     	</script>
     <!-- VIEWS -->
